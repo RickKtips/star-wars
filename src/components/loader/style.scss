@@ -1,0 +1,179 @@
+/* estilos de formatação e posicionamento do modal */
+.loader{
+display: flex;
+height: 100vh;
+width: 100%;
+justify-content: center;
+align-items: center;
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+&::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  z-index: -1;
+}
+.container{
+display: flex;
+padding: 5rem;
+width: 100%;
+height: 100vh;
+max-width: 50rem;
+max-height: 30rem;
+background: #000 url(../../../public/bgLoader.jpg);
+background-size: contain;
+}
+}
+.offLoader{
+  display: none;
+}
+
+.star {
+  animation: star 10s ease-out infinite;
+}
+.wars {
+  animation: wars 10s ease-out infinite;
+}
+.byline span {
+  animation: spin-letters 10s linear infinite;
+}
+.byline {
+  animation: move-byline 10s linear infinite;
+}
+
+/* Animações */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes spin-letters {
+  0%, 10% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70%, 86% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  95%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
+/* pro efeito 3d funcionar direitinho no conatiner */
+.starwars-load {
+  perspective: 800px;
+  transform-style: preserve3d;
+}
+
+/* estilos gerais */
+
+.starwars-load {
+  height: 17em;
+  left: 50%;
+  position: absolute;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 34em;
+}
+
+.byline
+{ 
+    strong{color: chartreuse;}
+    span {
+  display: inline-block;}
+}
+
+img {
+  width: 100%;
+}
+
+.star, .wars {
+  position: absolute;
+}
+
+.star {
+  top: -0.75em;
+}
+
+.wars {
+  bottom: -0.5em;
+}
+
+.byline {
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 0.4em;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/*** Media queries pra ajustar fontes em diferentes resoluções ***/
+
+@media only screen and (max-width: 600px) {
+  .starwars-load {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .starwars-load {
+    font-size: 0.8rem;
+    height: 7em;
+    width: 15em;
+}
+}
+
+
+

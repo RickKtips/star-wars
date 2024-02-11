@@ -1,0 +1,31 @@
+.chars-list{
+        display: flex; width: 100%; flex-wrap: wrap; justify-content:flex-start; gap:1.5rem;
+
+        section{
+            display: flex;  align-items: flex-start; gap: 1em; width: 23%;
+            flex-direction: column; font-size: 0.8rem; padding-bottom: 4em;
+            header{
+              width: 100%;
+            .logo{ 
+                height: 12rem; width: 100%; display: block; position: relative; object-fit: cover; object-position: center center; 
+                    img{min-width: 100%;min-height: 100%;}
+        }
+            h3{
+             font-size: 1.5rem;
+             padding: 1rem 0 0;
+            }
+        }
+        strong{font-size: 1rem;}
+
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .chars-list{
+            justify-content: center;
+        section{
+            width: calc(100% - 3em);
+        }
+    }
+      }
+      
