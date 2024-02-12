@@ -11,3 +11,11 @@ menu{
     
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .App{
+   menu{
+    select{min-width: 100%;}
+    button{padding:1rem}
+}}
+  }
